@@ -544,45 +544,31 @@ p { color: var(--muted); line-height: 1.75; }
 
 .teacher-card-top {
   background: var(--navy);
-  padding: 2.5rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 }
-.teacher-card-top::before {
-  content: '';
-  position: absolute;
-  right: -30px; top: -30px;
-  width: 160px; height: 160px;
-  border-radius: 50%;
-  background: rgba(232,93,38,0.08);
-}
-.teacher-avatar {
-  width: 80px; height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 1.25rem;
-  position: relative;
-  z-index: 1;
-  border: 3px solid rgba(255,255,255,0.2);
-  overflow: hidden;
-}
-.teacher-avatar img {
-  width: 100%; height: 100%;
+.teacher-card-photo {
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   object-position: center top;
   display: block;
 }
-.teacher-card:first-child .teacher-avatar { background: var(--teal); }
-.teacher-card:last-child .teacher-avatar { background: var(--orange); }
-
-.teacher-card-top h3 { color: var(--white); font-size: 1.35rem; margin-bottom: 0.3rem; }
-.teacher-role { font-size: 0.85rem; font-weight: 500; color: var(--orange); margin-bottom: 0; }
+.teacher-card-info {
+  padding: 1.5rem 2rem 1.75rem;
+  position: relative;
+}
+.teacher-card-info::before {
+  content: '';
+  position: absolute;
+  right: -20px; bottom: -20px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(232,93,38,0.08);
+  pointer-events: none;
+}
+.teacher-card-top h3 { color: var(--white); font-size: 1.4rem; margin-bottom: 0.3rem; position: relative; z-index: 1; }
+.teacher-role { font-size: 0.85rem; font-weight: 500; color: var(--orange); margin-bottom: 0; position: relative; z-index: 1; }
 
 .teacher-card-body {
   padding: 2rem;
