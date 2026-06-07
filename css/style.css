@@ -637,6 +637,44 @@ p { color: var(--muted); line-height: 1.75; }
 }
 .btn-teacher:hover { filter: brightness(1.08); transform: translateY(-2px); }
 
+.teacher-social {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+.teacher-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.teacher-social-link.whatsapp {
+  background: rgba(37,211,102,0.12);
+  color: #128C7E;
+  border: 1.5px solid rgba(37,211,102,0.35);
+}
+.teacher-social-link.whatsapp:hover {
+  background: #25D366;
+  color: white;
+  border-color: #25D366;
+}
+.teacher-social-link.instagram {
+  background: rgba(131,58,180,0.1);
+  color: #833ab4;
+  border: 1.5px solid rgba(131,58,180,0.25);
+}
+.teacher-social-link.instagram:hover {
+  background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  color: white;
+  border-color: transparent;
+}
+
 /* ============================================================
    PRICING
    ============================================================ */
