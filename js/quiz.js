@@ -73,8 +73,7 @@ const LEVELS = [
   { range: [3, 4],  code: 'A2', name: 'Elementary',      desc: 'You know the basics and are ready to expand. A solid starting point for everyday conversations.' },
   { range: [5, 6],  code: 'B1', name: 'Pre-Intermediate', desc: 'You can communicate in familiar situations and are ready to push further into fluency.' },
   { range: [7, 8],  code: 'B2', name: 'Intermediate',    desc: 'You have a good command of English. Time to tackle complex topics and professional communication.' },
-  { range: [9, 9],  code: 'C1', name: 'Advanced',        desc: 'Impressive! You use English fluently and flexibly. Let\'s get you to near-native mastery.' },
-  { range: [10, 10], code: 'C2', name: 'Mastery',         desc: 'Excellent! Near-native level. Teacher B will challenge you with advanced idioms, culture and style.' }
+  { range: [9, 10], code: 'C1', name: 'Advanced',        desc: 'Impressive! You use English fluently and flexibly. You\'re ready for advanced topics, professional communication and near-native mastery.' }
 ];
 
 const TRACK_RECOMMENDATIONS = {
@@ -82,8 +81,7 @@ const TRACK_RECOMMENDATIONS = {
   A2: 'General English or Conversational English at Elementary level is ideal.',
   B1: 'Any track works well. Conversational or Business English will accelerate your progress.',
   B2: 'Business English or Conversational English at Intermediate level fits perfectly.',
-  C1: 'Business or Conversational English at Advanced level — push for mastery.',
-  C2: 'Executive English and Native Flow — you\'re ready for the top.'
+  C1: 'Business or Conversational English at Advanced level — you\'re ready for the top.'
 };
 
 /* ── State ── */
