@@ -516,6 +516,8 @@ function t(key) {
          (TRANSLATIONS.en[key]) || key;
 }
 
+const LANG_LABELS = { en: 'EN', fr: 'FR', ar: 'AR' };
+
 function applyLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
@@ -544,9 +546,13 @@ function applyLanguage(lang) {
   const qn = document.getElementById('questionNum');
   if (qn) qn.textContent = t('qz.qnum').replace('{n}', '1');
 
-  /* Update lang switcher buttons */
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('lang-btn-active', btn.dataset.lang === lang);
+  /* Update desktop dropdown current label */
+  const langCurrent = document.getElementById('langCurrent');
+  if (langCurrent) langCurrent.textContent = LANG_LABELS[lang] || lang.toUpperCase();
+
+  /* Update active state on all .lang-option buttons */
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('lang-option-active', btn.dataset.lang === lang);
   });
 
   /* Re-render quiz questions if quiz is active */
@@ -554,9 +560,35 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* Lang switcher clicks */
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  const switcher  = document.getElementById('langSwitcher');
+  const triggerBtn = document.getElementById('langBtn');
+  const dropdown  = document.getElementById('langDropdown');
+
+  /* Toggle dropdown open/close */
+  if (triggerBtn && switcher) {
+    triggerBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = switcher.classList.toggle('open');
+      triggerBtn.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  /* Close dropdown when clicking outside */
+  document.addEventListener('click', e => {
+    if (switcher && !switcher.contains(e.target)) {
+      switcher.classList.remove('open');
+      if (triggerBtn) triggerBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* Language option clicks (desktop dropdown + mobile flat buttons) */
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyLanguage(btn.dataset.lang);
+      /* Close desktop dropdown after selection */
+      if (switcher) switcher.classList.remove('open');
+      if (triggerBtn) triggerBtn.setAttribute('aria-expanded', 'false');
+    });
   });
 
   /* Apply saved or default language */
