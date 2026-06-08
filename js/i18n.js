@@ -141,16 +141,24 @@ en: {
   'tp2.p':'Two expert teachers, each with a distinct focus — working together so you always have the right guide for where you are on your journey.',
 
   /* Quiz */
-  'qz.label':'Placement Test','qz.h1':'What\'s your English level?',
-  'qz.p':'Answer 10 quick questions and we\'ll find your level instantly.',
+  'qz.label':'Level Tests','qz.h1':'Test Your English Level',
+  'qz.p':'Choose a level and answer 10 questions. Score 8/10 or above to pass.',
+  'qz.sel.h2':'Select a Level',
+  'qz.sel.p':'Already know your level? Skip ahead and test it directly.',
+  'qz.A1.name':'Beginner','qz.A1.desc':'Basic vocabulary & simple sentences',
+  'qz.A2.name':'Elementary','qz.A2.desc':'Everyday situations & common grammar',
+  'qz.B1.name':'Pre-Intermediate','qz.B1.desc':'Familiar topics & basic professional use',
+  'qz.B2.name':'Intermediate','qz.B2.desc':'Complex topics & professional communication',
+  'qz.C1.name':'Advanced','qz.C1.desc':'Fluent, near-native expression',
   'qz.progress':'Question {n} of 10',
   'qz.qnum':'Question {n}',
   'qz.next':'Next Question →','qz.see':'See My Result →',
-  'qz.result.btn1':'Book a lesson','qz.result.btn2':'Explore tracks',
-  'qz.result.title':'All tracks — your level highlighted',
-  'qz.gen.tag':'Build a strong foundation',
-  'qz.biz.tag':'Speak like a professional',
-  'qz.con.tag':'Talk with confidence',
+  'qz.pass':'✓ PASSED','qz.fail':'✗ NOT YET',
+  'qz.pass.desc':'Great job! You are ready for {next}.',
+  'qz.pass.top':'Outstanding! You have mastered C1 — the highest level.',
+  'qz.fail.desc':'Keep practising at {level} — you\'re getting there!',
+  'qz.nextlevel':'Start {next} Quiz →',
+  'qz.retry':'Try Again','qz.choose':'Choose Another Level','qz.book':'Book a Lesson →',
 
   /* Contact */
   'ct.label':'Get in touch','ct.h1':'Let\'s Start Your Journey',
@@ -308,16 +316,24 @@ fr: {
   'tp2.p':'Deux professeurs experts, chacun avec une orientation distincte — travaillant ensemble pour que vous ayez toujours le bon guide à chaque étape de votre parcours.',
 
   /* Quiz */
-  'qz.label':'Test de niveau','qz.h1':'Quel est votre niveau d\'anglais ?',
-  'qz.p':'Répondez à 10 questions rapides et nous trouverons votre niveau instantanément.',
+  'qz.label':'Tests de Niveau','qz.h1':'Testez votre niveau d\'anglais',
+  'qz.p':'Choisissez un niveau et répondez à 10 questions. Obtenez 8/10 ou plus pour réussir.',
+  'qz.sel.h2':'Choisissez un niveau',
+  'qz.sel.p':'Vous connaissez déjà votre niveau ? Passez directement au test.',
+  'qz.A1.name':'Débutant','qz.A1.desc':'Vocabulaire de base et phrases simples',
+  'qz.A2.name':'Élémentaire','qz.A2.desc':'Situations quotidiennes et grammaire courante',
+  'qz.B1.name':'Pré-intermédiaire','qz.B1.desc':'Sujets familiers et usage professionnel de base',
+  'qz.B2.name':'Intermédiaire','qz.B2.desc':'Sujets complexes et communication professionnelle',
+  'qz.C1.name':'Avancé','qz.C1.desc':'Expression fluide, proche du niveau natif',
   'qz.progress':'Question {n} sur 10',
   'qz.qnum':'Question {n}',
   'qz.next':'Question suivante →','qz.see':'Voir mon résultat →',
-  'qz.result.btn1':'Réserver un cours','qz.result.btn2':'Explorer les parcours',
-  'qz.result.title':'Tous les parcours — votre niveau mis en évidence',
-  'qz.gen.tag':'Construisez une base solide',
-  'qz.biz.tag':'Parlez comme un professionnel',
-  'qz.con.tag':'Parlez avec confiance',
+  'qz.pass':'✓ RÉUSSI','qz.fail':'✗ PAS ENCORE',
+  'qz.pass.desc':'Bravo ! Vous êtes prêt(e) pour {next}.',
+  'qz.pass.top':'Excellent ! Vous avez maîtrisé le C1 — le niveau le plus élevé.',
+  'qz.fail.desc':'Continuez à pratiquer le {level} — vous progressez !',
+  'qz.nextlevel':'Commencer le quiz {next} →',
+  'qz.retry':'Réessayer','qz.choose':'Choisir un autre niveau','qz.book':'Réserver un cours →',
 
   /* Contact */
   'ct.label':'Prendre contact','ct.h1':'Commençons votre parcours',
@@ -475,16 +491,24 @@ ar: {
   'tp2.p':'معلمان خبيران، كل منهما بتركيز مميز — يعملان معاً حتى تجد دائماً المرشد المناسب في كل مرحلة من رحلتك.',
 
   /* Quiz */
-  'qz.label':'اختبار تحديد المستوى','qz.h1':'ما مستواك في اللغة الإنجليزية؟',
-  'qz.p':'أجب على 10 أسئلة سريعة وسنحدد مستواك فوراً.',
+  'qz.label':'اختبارات المستوى','qz.h1':'اختبر مستواك في اللغة الإنجليزية',
+  'qz.p':'اختر مستوى وأجب على 10 أسئلة. احصل على 8/10 أو أكثر للنجاح.',
+  'qz.sel.h2':'اختر مستواك',
+  'qz.sel.p':'هل تعرف مستواك بالفعل؟ انتقل مباشرة إلى الاختبار المناسب.',
+  'qz.A1.name':'مبتدئ','qz.A1.desc':'المفردات الأساسية والجمل البسيطة',
+  'qz.A2.name':'أساسي','qz.A2.desc':'المواقف اليومية والقواعد الشائعة',
+  'qz.B1.name':'ما قبل المتوسط','qz.B1.desc':'المواضيع المألوفة والاستخدام المهني الأساسي',
+  'qz.B2.name':'متوسط','qz.B2.desc':'الموضوعات المعقدة والتواصل المهني',
+  'qz.C1.name':'متقدم','qz.C1.desc':'تعبير طليق وشبه أصلي',
   'qz.progress':'السؤال {n} من 10',
   'qz.qnum':'السؤال {n}',
   'qz.next':'← السؤال التالي','qz.see':'← عرض نتيجتي',
-  'qz.result.btn1':'احجز درساً','qz.result.btn2':'استكشف المسارات',
-  'qz.result.title':'جميع المسارات — مستواك مميز',
-  'qz.gen.tag':'بناء أساس قوي',
-  'qz.biz.tag':'تحدث كالمحترفين',
-  'qz.con.tag':'تحدث بثقة',
+  'qz.pass':'✓ نجحت','qz.fail':'✗ ليس بعد',
+  'qz.pass.desc':'أحسنت! أنت مستعد لـ {next}.',
+  'qz.pass.top':'ممتاز! لقد أتقنت مستوى C1 — أعلى المستويات.',
+  'qz.fail.desc':'استمر في الممارسة على مستوى {level} — أنت في الطريق الصحيح!',
+  'qz.nextlevel':'← ابدأ اختبار {next}',
+  'qz.retry':'حاول مرة أخرى','qz.choose':'اختر مستوى آخر','qz.book':'← احجز درساً',
 
   /* Contact */
   'ct.label':'تواصل معنا','ct.h1':'لنبدأ رحلتك',
@@ -538,13 +562,7 @@ function applyLanguage(lang) {
     if (val) el.innerHTML = val;
   });
 
-  /* Progress text with placeholder */
-  const pt = document.getElementById('progressText');
-  if (pt && !pt.dataset.quizRunning) {
-    pt.textContent = t('qz.progress').replace('{n}', '1');
-  }
-  const qn = document.getElementById('questionNum');
-  if (qn) qn.textContent = t('qz.qnum').replace('{n}', '1');
+  /* Re-render quiz if active (quiz.js handles this via renderQuizLang) */
 
   /* Update desktop dropdown current label */
   const langCurrent = document.getElementById('langCurrent');

@@ -635,12 +635,46 @@
 <div id="page-quiz" class="page">
 
   <div class="quiz-header">
-    <span class="section-label" data-i18n="qz.label">Placement Test</span>
-    <h1 data-i18n="qz.h1">What's your English level?</h1>
-    <p data-i18n="qz.p">Answer 10 quick questions and we'll find your level instantly.</p>
+    <span class="section-label" data-i18n="qz.label">Level Tests</span>
+    <h1 data-i18n="qz.h1">Test Your English Level</h1>
+    <p data-i18n="qz.p">Choose a level and answer 10 questions. Score 8/10 or above to pass.</p>
   </div>
 
-  <div class="quiz-progress-wrap">
+  <!-- ── Level selector ── -->
+  <div id="quizLevelSelect" class="quiz-level-select">
+    <h2 class="qls-heading" data-i18n="qz.sel.h2">Select a Level</h2>
+    <p class="qls-sub" data-i18n="qz.sel.p">Already know your level? Skip ahead and test it directly.</p>
+    <div class="quiz-level-cards">
+      <button class="quiz-level-card" data-level="A1">
+        <span class="qlc-badge qlc-a1">A1</span>
+        <span class="qlc-name" data-i18n="qz.A1.name">Beginner</span>
+        <span class="qlc-desc" data-i18n="qz.A1.desc">Basic vocabulary &amp; simple sentences</span>
+      </button>
+      <button class="quiz-level-card" data-level="A2">
+        <span class="qlc-badge qlc-a2">A2</span>
+        <span class="qlc-name" data-i18n="qz.A2.name">Elementary</span>
+        <span class="qlc-desc" data-i18n="qz.A2.desc">Everyday situations &amp; common grammar</span>
+      </button>
+      <button class="quiz-level-card" data-level="B1">
+        <span class="qlc-badge qlc-b1">B1</span>
+        <span class="qlc-name" data-i18n="qz.B1.name">Pre-Intermediate</span>
+        <span class="qlc-desc" data-i18n="qz.B1.desc">Familiar topics &amp; basic professional use</span>
+      </button>
+      <button class="quiz-level-card" data-level="B2">
+        <span class="qlc-badge qlc-b2">B2</span>
+        <span class="qlc-name" data-i18n="qz.B2.name">Intermediate</span>
+        <span class="qlc-desc" data-i18n="qz.B2.desc">Complex topics &amp; professional communication</span>
+      </button>
+      <button class="quiz-level-card" data-level="C1">
+        <span class="qlc-badge qlc-c1">C1</span>
+        <span class="qlc-name" data-i18n="qz.C1.name">Advanced</span>
+        <span class="qlc-desc" data-i18n="qz.C1.desc">Fluent, near-native expression</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Progress bar ── -->
+  <div class="quiz-progress-wrap" id="quizProgressWrap" style="display:none">
     <div class="quiz-progress-meta">
       <span id="progressText">Question 1 of 10</span>
     </div>
@@ -649,7 +683,8 @@
     </div>
   </div>
 
-  <div class="quiz-card" id="quizCard">
+  <!-- ── Quiz card ── -->
+  <div class="quiz-card" id="quizCard" style="display:none">
     <div class="quiz-question-box">
       <div class="question-num" id="questionNum">Question 1</div>
       <div class="question-text" id="questionText"></div>
@@ -658,48 +693,17 @@
     </div>
   </div>
 
-  <div class="quiz-result" id="quizResult">
+  <!-- ── Result ── -->
+  <div class="quiz-result" id="quizResult" style="display:none">
     <div class="result-box">
-      <div class="result-level-badge" id="resultCode">B1</div>
-      <h2 id="resultName">Your level is: B1 — Intermediate</h2>
+      <div class="result-verdict" id="resultVerdict">PASSED</div>
+      <div class="result-score" id="resultScore">8 / 10</div>
+      <h2 id="resultName"></h2>
       <p id="resultDesc"></p>
-      <p id="resultRec" style="font-size:0.9rem;color:var(--orange);font-weight:600;margin-top:0.5rem;"></p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
-        <a href="#" class="btn btn-primary" data-page="contact" data-i18n="qz.result.btn1">Book a lesson</a>
-        <a href="#" class="btn btn-outline-dark" data-page="tracks" data-i18n="qz.result.btn2">Explore tracks</a>
-      </div>
-    </div>
-    <h3 class="result-tracks-title" data-i18n="qz.result.title">All tracks — your level highlighted</h3>
-    <div class="track-cards" style="max-width:900px;margin:0 auto;">
-      <div class="track-card teal result-track-card">
-        <div class="track-card-header"><div class="track-icon">📖</div><h3 data-i18n="tp.gen.name">General English</h3><p data-i18n="qz.gen.tag">Build a strong foundation</p></div>
-        <div class="track-card-body">
-          <div class="track-levels">
-            <span class="level-dot">A1</span><span class="level-dot">A2</span><span class="level-dot">B1</span>
-            <span class="level-dot">B2</span><span class="level-dot">C1</span>
-          </div>
-          <a href="#" class="btn-track" data-page="tracks" data-scroll="general" data-i18n="tp.explore">Explore track →</a>
-        </div>
-      </div>
-      <div class="track-card amber result-track-card">
-        <div class="track-card-header"><div class="track-icon">💼</div><h3 data-i18n="tp.biz.name">Business English</h3><p data-i18n="qz.biz.tag">Speak like a professional</p></div>
-        <div class="track-card-body">
-          <div class="track-levels">
-            <span class="level-dot">A1</span><span class="level-dot">A2</span><span class="level-dot">B1</span>
-            <span class="level-dot">B2</span><span class="level-dot">C1</span>
-          </div>
-          <a href="#" class="btn-track" data-page="tracks" data-scroll="business" data-i18n="tp.explore">Explore track →</a>
-        </div>
-      </div>
-      <div class="track-card blue result-track-card">
-        <div class="track-card-header"><div class="track-icon">💬</div><h3 data-i18n="tp.con.name">Conversational English</h3><p data-i18n="qz.con.tag">Talk with confidence</p></div>
-        <div class="track-card-body">
-          <div class="track-levels">
-            <span class="level-dot">A1</span><span class="level-dot">A2</span><span class="level-dot">B1</span>
-            <span class="level-dot">B2</span><span class="level-dot">C1</span>
-          </div>
-          <a href="#" class="btn-track" data-page="tracks" data-scroll="conversational" data-i18n="tp.explore">Explore track →</a>
-        </div>
+      <div class="result-actions">
+        <button class="btn btn-primary" id="nextLevelBtn" style="display:none">Start A2 Quiz →</button>
+        <button class="btn btn-outline-dark" id="retryBtn" data-i18n="qz.retry">Try Again</button>
+        <button class="btn btn-outline-dark" id="chooseLevelBtn" data-i18n="qz.choose">Choose Another Level</button>
       </div>
     </div>
   </div>
