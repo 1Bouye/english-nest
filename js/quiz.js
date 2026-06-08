@@ -112,9 +112,10 @@ function renderQuestion() {
 
   const q = QUESTIONS[current];
   const pct = (current / QUESTIONS.length) * 100;
+  const tr = (typeof t === 'function') ? t : (k) => k;
   progressFill.style.width = pct + '%';
-  progressText.textContent = `Question ${current + 1} of ${QUESTIONS.length}`;
-  questionNum.textContent = `Question ${current + 1}`;
+  progressText.textContent = tr('qz.progress').replace('{n}', current + 1);
+  questionNum.textContent  = tr('qz.qnum').replace('{n}', current + 1);
   questionText.textContent = q.text;
 
   answerOptions.innerHTML = '';
@@ -141,8 +142,9 @@ function selectAnswer(index, btn) {
 
   if (index === correct) score++;
 
+  const tr2 = (typeof t === 'function') ? t : (k) => k;
   nextBtn.classList.add('visible');
-  nextBtn.textContent = current < QUESTIONS.length - 1 ? 'Next Question →' : 'See My Result →';
+  nextBtn.textContent = current < QUESTIONS.length - 1 ? tr2('qz.next') : tr2('qz.see');
 }
 
 function showResult() {
@@ -181,6 +183,17 @@ if (nextBtn) {
     }
   });
 }
+
+/* Re-render current question UI strings when language changes */
+window.renderQuizLang = function() {
+  if (document.getElementById('quizCard').style.display === 'none') return;
+  const tr = (typeof t === 'function') ? t : (k) => k;
+  progressText.textContent = tr('qz.progress').replace('{n}', current + 1);
+  questionNum.textContent  = tr('qz.qnum').replace('{n}', current + 1);
+  if (nextBtn.classList.contains('visible')) {
+    nextBtn.textContent = current < QUESTIONS.length - 1 ? tr('qz.next') : tr('qz.see');
+  }
+};
 
 /* Reset function called by SPA navigation when returning to quiz */
 window.resetQuiz = function() {
